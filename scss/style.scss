@@ -1,0 +1,307 @@
+// Font - Noto Sans JP
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&display=swap');
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+* {
+  position: relative;
+}
+
+ul, li, hr, h1, h2, h3, h4, h5, h6, a, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.clearfix, .col-3 .col-6 {
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.header-height {
+  height: 66px;
+}
+
+.footer-height {
+  height: 442px;
+}
+
+.col-3 {
+  float: left;
+  width: 25%;
+}
+
+.col-6 {
+  float: left;
+  width: 50%;
+}
+
+.logo {
+  width: 184px;
+}
+
+/////////////////////////////////////////////////
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.navbar {
+  background: white;
+
+  .logo {
+    float: left;
+    margin: 16px 20px;
+    margin-bottom: 14px;
+  }
+
+  .nav {
+    float: right;
+    margin: 8px;
+    margin-right: 20px;
+  }
+
+  .item {
+    float: left;
+    margin: 0 4px;
+    padding: 8px;
+    
+    img {
+      width: auto;
+      height: 32px;
+    }
+
+    &.search {
+      img {
+        height: 26px;
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////////
+
+.menu {
+  display: flex;
+  background: rgba(256, 256, 256, .8);
+}
+
+.menu-list {
+  margin: 0 auto;
+
+  a {
+    display: inline-block;
+    padding: 14px 80px;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #1e1e1e;
+    transition: all .3s;
+
+    &:last-child {
+      text-transform: uppercase;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: #ed5e7d;
+      transform: translateX(-50%);
+      transition: all .3s;
+    }
+
+    &:hover {
+      background: rgba(256, 256, 256, .5);
+      &:after {
+        width: 88px;
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////////////
+
+.information {
+  padding: 120px 0;
+  text-align: center;
+  background: white;
+
+  .news {
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 24px;
+    width: 800px;
+
+    p {
+      line-height: 2;
+    }
+  }
+}
+
+/////////////////////////////////////////////////
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 120px 64px;
+  width: 100%;
+  background: #e5e5e5;
+  z-index: -1;
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .info {
+    .phone {
+  
+      img {
+        float: left;
+        margin-top: 4px;
+        margin-right: 8px;
+        width: 40px;
+      }
+  
+      p {
+        vertical-align: top;
+        font-size: 32px;
+        line-height: 1;
+      }
+    }
+
+    .time {
+      font-weight: 300;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 24px;
+      padding-left: 64px;
+      padding-right: 64px;
+      border: 1px solid #1e1e1e;
+      line-height: 2.8;
+      transition: all .6s;
+      &:hover {  
+        color: white;
+        background: #1e1e1e;
+      }
+    }
+  }
+
+  .company {
+    span {
+      float: left;
+    }
+    img {
+      float: left;
+      margin-top: 8px;
+      margin-left: 4px;
+      width: 24px;
+    }
+  }
+
+  .copyright {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  a, p {
+    line-height: 3;
+  }
+
+  a {
+    color: #1e1e1e;
+    transition: all .6s;
+
+    &:hover {
+      color: #999;
+    }
+  }
+
+  .col-6 {
+    a {
+      display: block;
+      font-weight: 300;
+      line-height: 2.6;
+    }
+  }
+}
+
+/////////////////////////////////////////////////
+
+.scroll-top {
+  display: block;
+  position: fixed;
+  right: 32px;
+  bottom: 50px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1e1e1e;
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -64%);
+    -webkit-transform: translate(-50%, -64%);
+    -moz-transform: translate(-50%, -64%);
+    -ms-transform: translate(-50%, -64%);
+    -o-transform: translate(-50%, -64%);
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(256, 256, 256, .16);
+    opacity: 0;
+    transition: all .3s;
+}
+
+  &:hover {
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
